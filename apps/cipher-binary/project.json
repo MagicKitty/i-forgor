@@ -1,0 +1,82 @@
+{
+  "name": "cipher-binary",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/cipher-binary/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/cipher-binary",
+        "browser": "apps/cipher-binary/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/cipher-binary/tsconfig.app.json",
+        "assets": [
+          "apps/cipher-binary/src/assets"
+        ],
+        "styles": ["apps/cipher-binary/src/styles.css"],
+        "scripts": [
+          "node_modules/particles.js/particles.js"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@angular/build:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "cipher-binary:build:production"
+        },
+        "development": {
+          "buildTarget": "cipher-binary:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular/build:extract-i18n",
+      "options": {
+        "buildTarget": "cipher-binary:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "cipher-binary:build",
+        "port": 4200,
+        "staticFilePath": "dist/apps/cipher-binary/browser",
+        "spa": true
+      }
+    }
+  }
+}

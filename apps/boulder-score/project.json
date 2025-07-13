@@ -14,14 +14,14 @@
         "browser": "apps/boulder-score/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/boulder-score/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
+        "inlineStyleLanguage": "css",
         "assets": [
           {
             "glob": "**/*",
             "input": "apps/boulder-score/public"
           }
         ],
-        "styles": ["apps/boulder-score/src/styles.scss"]
+        "styles": ["apps/boulder-score/src/styles.css"]
       },
       "configurations": {
         "production": {

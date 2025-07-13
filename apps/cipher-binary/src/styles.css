@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+#particles-js {
+  @apply size-full fixed bg-[#151748];
+}
+
+body, html {
+  @apply size-full;
+}
