@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [],
+  "outputDirectory": "dist/apps/cipher-binary/browser"
+}
