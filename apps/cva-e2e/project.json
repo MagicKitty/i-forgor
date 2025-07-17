@@ -1,0 +1,10 @@
+{
+  "name": "cva-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/cva-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["cva"],
+  "// targets": "to see all targets run: nx show project cva-e2e --web",
+  "targets": {}
+}
