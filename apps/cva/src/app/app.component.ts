@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { DogeComponent } from '../doge/doge.component';
+import { DogeComponent } from './doge/doge.component';
 import { JsonPipe } from '@angular/common';
 
 @Component({
