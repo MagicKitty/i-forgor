@@ -10,4 +10,8 @@ export const containerPageRoutes: Route[] = [
     path: 'first-step',
     loadComponent: () => import('./event-page.component'),
   },
+  {
+    path: '**',
+    loadComponent: () => import('../404-alt.component'),
+  }
 ];
