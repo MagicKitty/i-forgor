@@ -1,0 +1,6 @@
+{
+  "users": [
+    { "id": "1", "name": "Nicolas Blin", "views": 100 },
+    { "id": "2", "name": "Leïla Marchal", "views": 200 }
+  ]
+}

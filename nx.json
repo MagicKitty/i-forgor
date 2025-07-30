@@ -84,7 +84,12 @@
       "strict": false
     },
     "@nx/angular:component": {
-      "style": "css"
+      "style": "css",
+      "standalone": true,
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "skipTests": true,
+      "changeDetection": "Default"
     }
   }
 }
